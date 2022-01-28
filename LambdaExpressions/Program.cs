@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 
 namespace LambdaExpressions
 {
@@ -7,9 +8,9 @@ namespace LambdaExpressions
     {
         static void Main(string[] args)
         {
-            var books = new BookRepository().GetBooks();
+            List<Book> books = BookRepository.GetBooks();
 
-            var cheapBooks = books.FindAll(b => b.Price < 10);
+            List<Book> cheapBooks = books.FindAll(b => b.Price < 10);
 
             foreach (var book in cheapBooks)
             {

@@ -2,9 +2,9 @@
 
 namespace LambdaExpressions
 {
-    public class BookRepository
+    public static class BookRepository
     {
-        public List<Book> GetBooks()
+        public static List<Book> GetBooks()
         {
             return new List<Book>
             {
